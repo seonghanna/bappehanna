@@ -33,7 +33,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|404d80c3-2b34-41d2-9f03-406ea3f8ad4b_Armature
+      name: Vd
       takeName: Armature|404d80c3-2b34-41d2-9f03-406ea3f8ad4b_Armature
       internalID: -4368635527188109212
       firstFrame: 0
@@ -46,7 +46,7 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0

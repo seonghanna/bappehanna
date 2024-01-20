@@ -1241,7 +1241,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 717, y: -330.83984}
+  m_AnchoredPosition: {x: 29, y: -330.83984}
   m_SizeDelta: {x: 234, y: 210.3203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1376583800
@@ -1362,8 +1362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822eb9ca2c59d4ccf8374f01ac58c266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundOnImage: {fileID: 21300000, guid: a8bf463d0bcbdd440b693618eccf4027, type: 3}
-  soundOffImage: {fileID: 21300000, guid: c45822dd0d148ae4c80084e497c39961, type: 3}
+  soundOnImage: {fileID: 21300000, guid: 6ab5fbbaa2fa54bccaed17116f4cb33e, type: 3}
+  soundOffImage: {fileID: 21300000, guid: 003c2ef886e9546bfa4c8aa4ea5e8814, type: 3}
 --- !u!1 &1411704447
 GameObject:
   m_ObjectHideFlags: 0
