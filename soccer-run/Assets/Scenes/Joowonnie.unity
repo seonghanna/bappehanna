@@ -520,7 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eeaf24c5c9542f49b238715dd973158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundPrefab: {fileID: 0}
+  backgroundPrefab: {fileID: 986181047}
   numberOfBackgrounds: 10
   backgroundWidth: 10
 --- !u!1 &1260299047 stripped
