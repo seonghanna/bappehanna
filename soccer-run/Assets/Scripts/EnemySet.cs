@@ -10,22 +10,26 @@ public class EnemySet : MonoBehaviour
     public GameObject enemyFront;
     public GameObject enemyLeft;
     public GameObject enemyRight;
+    public GameObject enemyLeftTackcle;
+    public GameObject enemyRightTackcle;
     private GameObject[] enemySetFront = new GameObject[31];
     private GameObject[] enemySetLeft = new GameObject[31];
     private GameObject[] enemySetRight = new GameObject[31];
+    private GameObject[] enemySetLeftTackle = new GameObject[31];
+    private GameObject[] enemySetRightTackle = new GameObject[31];
     //사람 6개, 경로 3개, 
-    // private int[,] enemyActive = new int[,] {    {0, 0, 0},  { 0,  5,  0}, 
-    //                                              {0, 0, 0},  { 0,  0, 12},
-    //                                              {0, 0, 0},  {16,  0, 18}, 
-    //                                              {0, 0, 0},  { 0, 23,  0},
-    //                                              {0, 0, 0},  {28,  5, 30}, 
-    //                                              {0, 0, 0},  { 0,  5,  0}, 
-    //                                              {0, 0, 0},  { 0,  0, 12},
-    //                                              {0, 0, 0},  {16,  0, 18}, 
-    //                                              {0, 0, 0},  { 0, 23,  0},
-    //                                              {0, 0, 0},  {28,  5, 30} 
-    //                                              
-    // };
+    private int[,] enemyActive = new int[,] {    {0, 0, 0},  { 0,  1,  0}, 
+                                                 {0, 0, 0},  { 0,  0,  1},
+                                                 {0, 0, 0},  { 1,  0,  1}, 
+                                                 {0, 0, 0},  { 0,  1,  0},
+                                                 {0, 0, 0},  { 1,  1,  1}, 
+                                                 {0, 0, 0},  { 0,  1,  0}, 
+                                                 {0, 0, 0},  { 0,  0,  1},
+                                                 {0, 0, 0},  { 1,  0,  1}, 
+                                                 {0, 0, 0},  { 0,  1,  0},
+                                                 {0, 0, 0},  { 1,  1,  1} 
+                                                 
+    };
     // void Start()
     // {
     //     for (int i = 0; i < 10; i++)
