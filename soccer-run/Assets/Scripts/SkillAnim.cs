@@ -8,14 +8,10 @@ public class SkillAnim : MonoBehaviour
 {
     public Animator animator_player;
     public Animator animator_ball;
-    // Start is called before the first frame update
-    /*void Start()
-    {
-        Button btn = GetComponent<Button>();
-        //btn.onClick.AddListener(ChangeTrigger);
-    }*/
+    public GameObject boostItem;
+    private bool isFastDribbling = false;
+    private float fastDribbleTime = 0f;
 
-    // Update is called once per frame
     public void ChangePtTrigger()
     {
         animator_player.SetTrigger("isPt"); // Trigger 변경
@@ -52,10 +48,32 @@ public class SkillAnim : MonoBehaviour
         animator_ball.SetTrigger("isSp");
     }
 
-
-
-
     private void Update()
+    {
+        if (isFastDribbling)
+        {
+            fastDribbleTime += Time.deltaTime;
+            Debug.Log(fastDribbleTime);
+            if (fastDribbleTime >= 3f)
+            {
+                animator_player.SetBool("IsFastDribble", false);
+                fastDribbleTime = 0f;
+                isFastDribbling = false;
+            }
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "BOOST")
+        {
+            boostItem.SetActive(false);
+            animator_player.SetBool("IsFastDribble", true);
+            isFastDribbling = true;
+        }
+    }
+
+    public void ResetRotation()
     {
         transform.rotation = Quaternion.Euler(0f, 0f, 0f);
     }
