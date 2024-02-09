@@ -1,16 +1,46 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SkillAnim : MonoBehaviour
 {
+    public GameObject panel; 
     public Animator animator_player;
     public Animator animator_ball;
     public GameObject boostItem;
     private bool isFastDribbling = false;
     private float fastDribbleTime = 0f;
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy")) // Enemy 태그를 가진 오브젝트와 충돌했는지 확인
+        {
+            Gameover();
+
+            // 게임 오버 패널 활성화
+            panel.SetActive(true);
+        }
+    }
+
+    void Start()
+    {
+        // 시간을 정상으로 복구
+        Time.timeScale = 1f;
+
+        // 게임 오버 패널 활성화
+        panel.SetActive(false);
+    }
+
+    void Gameover()
+    {
+        // 게임 정지
+        Time.timeScale = 0f;
+
+        
+    }
 
     public void ChangePtTrigger()
     {
@@ -71,6 +101,8 @@ public class SkillAnim : MonoBehaviour
             animator_player.SetBool("IsFastDribble", true);
             isFastDribbling = true;
         }
+
+        
     }
 
     public void ResetRotation()
