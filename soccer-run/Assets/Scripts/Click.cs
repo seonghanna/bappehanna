@@ -18,8 +18,12 @@ public class Click : MonoBehaviour
         
     }
 
-    public void next()
+    /*public void next()
     {
         SceneManager.LoadScene(1);
+    }*/
+    public void LoadSceneByIndex(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
     }
 }
