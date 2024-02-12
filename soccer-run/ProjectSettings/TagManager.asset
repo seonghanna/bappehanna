@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - BOOST
+  - ENEMY
+  - BALL
+  - GAMEOVERPANEL
+  - PLAYER
   layers:
   - Default
   - TransparentFX

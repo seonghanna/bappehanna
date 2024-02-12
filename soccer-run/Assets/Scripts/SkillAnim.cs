@@ -6,11 +6,43 @@ using UnityEngine.UI;
 
 public class SkillAnim : MonoBehaviour
 {
-    public Animator animator_player;
-    public Animator animator_ball;
-    public GameObject boostItem;
+    //private GameObject gameOverPanel;
+    private Animator animator_player;
+    private Animator animator_ball;
+    private GameObject boostItem;
     private bool isFastDribbling = false;
     private float fastDribbleTime = 0f;
+
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("ENEMY")) // Enemy 태그를 가진 오브젝트와 충돌했는지 확인
+    //    {
+    //        Gameover();
+    //        // 게임 오버 패널 활성화
+    //        gameOverPanel.SetActive(true);
+    //    }
+    //}
+
+    //private void Start()
+    //{
+    //    // 시간을 정상으로 복구
+    //    Time.timeScale = 1f;
+    //}
+
+    public void Initialize()
+    {
+        ReSpawn reSpawn = FindObjectOfType<ReSpawn>();
+        animator_player = reSpawn.GetPlayerAnim();
+        animator_ball = reSpawn.GetBallAnim();
+        boostItem = GameObject.FindWithTag("BOOST");
+    }
+
+    //void Gameover()
+    //{
+    //    gameOverPanel = GameObject.FindWithTag("GAMEOVERPANEL");
+    //    // 게임 정지
+    //    Time.timeScale = 0f;
+    //}
 
     public void ChangePtTrigger()
     {
@@ -34,12 +66,13 @@ public class SkillAnim : MonoBehaviour
     {
         animator_player.SetTrigger("isVd"); // Trigger 변경
         animator_ball.SetTrigger("isVd");
+
     }
 
     public void ChangeMtTrigger()
     {
         animator_player.SetTrigger("isMt"); // Trigger 변경
-        animator_ball.SetTrigger("isMt");
+        //animator_ball.SetTrigger("isMt");
     }
 
     public void ChangeSpTrigger()
@@ -53,7 +86,6 @@ public class SkillAnim : MonoBehaviour
         if (isFastDribbling)
         {
             fastDribbleTime += Time.deltaTime;
-            Debug.Log(fastDribbleTime);
             if (fastDribbleTime >= 3f)
             {
                 animator_player.SetBool("IsFastDribble", false);
@@ -73,8 +105,8 @@ public class SkillAnim : MonoBehaviour
         }
     }
 
-    public void ResetRotation()
-    {
-        transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-    }
+    //public void ResetRotation()
+    //{
+    //    transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+    //}
 }

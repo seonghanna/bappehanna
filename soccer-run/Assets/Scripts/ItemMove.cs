@@ -20,7 +20,7 @@ public class ItemMove : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")){
+        if (other.CompareTag("PLAYER")){
             gameObject.SetActive(false);
             skills.GetComponent<SkillManager>().skillNum++;
             skills.GetComponent<SkillManager>().skillChange = true;

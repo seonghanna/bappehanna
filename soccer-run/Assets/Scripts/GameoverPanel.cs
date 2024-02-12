@@ -13,10 +13,7 @@ public class GameoverPanel : MonoBehaviour
 
     private void Awake()
     {
-        
         gameObject.SetActive(false); 
-        
-
     }
 
     public void ShowPanel()
@@ -33,11 +30,6 @@ public class GameoverPanel : MonoBehaviour
     {
         SceneManager.LoadScene("GameScene"); 
                                              
-    }
-        // Start is called before the first frame update
-        void Start()
-    {
-        
     }
 
 }

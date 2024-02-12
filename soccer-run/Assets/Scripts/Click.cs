@@ -6,20 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class Click : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void next()
+    /*public void next()
     {
         SceneManager.LoadScene(1);
+    }*/
+    public void LoadSceneByIndex(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneIndex);
     }
 }
