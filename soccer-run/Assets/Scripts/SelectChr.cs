@@ -12,7 +12,7 @@ public class SelectChr : MonoBehaviour
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim =GetComponent<Animator>();
         if (DataManager.instance.currentCharacter == character) OnSelect();
         else OnDeSelect();
     }
@@ -21,10 +21,10 @@ public class SelectChr : MonoBehaviour
     {
         DataManager.instance.currentCharacter = character;
         OnSelect();
+        Debug.Log(character);
         for (int i =0; i<chars.Length; i++)
         {
             if (chars[i] != this) chars[i].OnDeSelect();
-            Debug.Log("Char " + i + " assigned: " + (chars[i] != null).ToString());
         }
     }
 

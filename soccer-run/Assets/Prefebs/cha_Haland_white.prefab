@@ -227,11 +227,11 @@ MonoBehaviour:
   character: 0
   chars:
   - {fileID: 7832363773222828473}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7505418321498274439, guid: 5063ef5a4836c444aa9774214238492b, type: 3}
+  - {fileID: 8327827346909740315, guid: 6afb25dbd83da48e3924253723fb8a1f, type: 3}
+  - {fileID: 2832709060782756035, guid: d1f50f0fc08d24f38921a08cb60b9f63, type: 3}
+  - {fileID: 3156038275451224224, guid: a9a5ec0e5a012498da9a16153a2dfdf8, type: 3}
+  - {fileID: 6825557919276309745, guid: 7d5666f7cde0d4b1daaa7b7497f4b604, type: 3}
 --- !u!65 &3537614835953675627
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -224,14 +224,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab99e60466934d3abb67af0739e06b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: 3
+  character: 2
   chars:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7832363773222828473, guid: 28131ec7ea4564ea7860d50d95241f12, type: 3}
+  - {fileID: 7505418321498274439, guid: 5063ef5a4836c444aa9774214238492b, type: 3}
   - {fileID: 8327827346909740315}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2832709060782756035, guid: d1f50f0fc08d24f38921a08cb60b9f63, type: 3}
+  - {fileID: 3156038275451224224, guid: a9a5ec0e5a012498da9a16153a2dfdf8, type: 3}
+  - {fileID: 6825557919276309745, guid: 7d5666f7cde0d4b1daaa7b7497f4b604, type: 3}
 --- !u!65 &851062519495582383
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -278,7 +278,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!114 &-3583588619022833195
 MonoBehaviour:

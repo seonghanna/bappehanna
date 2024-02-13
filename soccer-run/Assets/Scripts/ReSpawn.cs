@@ -14,10 +14,6 @@ public class ReSpawn : MonoBehaviour
     void Awake()
     {
         player = Instantiate(charPrefabs[(int)DataManager.instance.currentCharacter]);
-        for (int i = 0; i < charPrefabs.Length; i++)
-        {
-            Debug.Log("Index " + i + ": " + charPrefabs[i].name);
-        }
         player.transform.position = transform.position;
         player_anim = player.GetComponent<Animator>();
         mainCamera = player.GetComponentInChildren<Camera>().gameObject;
@@ -34,7 +30,7 @@ public class ReSpawn : MonoBehaviour
 
     public void OnClickStartBtn()
     {
-        player.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        
         player_anim.SetBool("isStart", true);
         mainCamera.transform.position = new Vector3(0, 4, -8);
         StartBtn.SetActive(false);
@@ -43,6 +39,7 @@ public class ReSpawn : MonoBehaviour
         {
             skillAnim.Initialize();
         }
+        player.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
     }
 
     public GameObject GetPlayer()
