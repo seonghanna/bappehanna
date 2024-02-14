@@ -1,1 +1,1 @@
-/Users/jangjaegyu/Development/Game/Unity/bappehanna/soccer-run
+/Users/seonghanna/Documents/GitHub/bappehanna/soccer-run
