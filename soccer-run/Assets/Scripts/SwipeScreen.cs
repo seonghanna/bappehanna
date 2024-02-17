@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class SwipeScreen : MonoBehaviour
 {
-    public Animator playerAnim;
-    public Animator ballAnim;
+    private GameObject player;
+    private Animator playerAnim;
+    private Animator ballAnim;
     private Vector2 startTouchPosition; 
     private Vector2 endTouchPosition;
+
+    void Start()
+    {
+        ReSpawn reSpawn = FindObjectOfType<ReSpawn>();
+        player = reSpawn.GetPlayer();
+        playerAnim = reSpawn.GetPlayerAnim();
+        ballAnim = reSpawn.GetBallAnim();
+    }
 
     private void Update()
     {
